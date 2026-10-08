@@ -22,7 +22,7 @@ void main() async {
     // تسجيل دخول تلقائي للمستخدم الافتراضي
     try {
       final apiService = ApiService();
-      final response = await apiService.login(username: 'test_driver1', password: 'pass123');
+      final response = await apiService.login(username: 'test_driver1', password: '');
       if (response['success'] == true) {
         await prefs.setString('auth_token', response['token']);
         await prefs.setString('username', 'test_driver1');

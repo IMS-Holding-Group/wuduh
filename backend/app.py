@@ -16,7 +16,7 @@ from modules.rules_engine import RulesEngine
 
 app = Flask(__name__)
 CORS(app)
-app.config['SECRET_KEY'] = 'wuduh-secret-key-change-in-production'
+app.config['SECRET_KEY'] = ''
 token_serializer = URLSafeTimedSerializer(app.config['SECRET_KEY'])
 
 DB_PATH = os.path.join(os.path.dirname(__file__), 'db', 'wuduh.sqlite')
@@ -136,9 +136,9 @@ def init_db():
     if cursor.fetchone()[0] == 0:
         # Insert test users
         users_data = [
-            ('test_driver1', generate_password_hash('pass123'), 'محمد السائق', 'm1@example.com', '+966500000001'),
-            ('test_driver2', generate_password_hash('pass123'), 'سارة السائق', 's2@example.com', '+966500000002'),
-            ('test_driver3', generate_password_hash('pass123'), 'عبدالعزيز السائق', 'a3@example.com', '+966500000003'),
+            ('test_driver1', generate_password_hash(''), 'محمد السائق', 'm1@example.com', '+966500000001'),
+            ('test_driver2', generate_password_hash(''), 'سارة السائق', 's2@example.com', '+966500000002'),
+            ('test_driver3', generate_password_hash(''), 'عبدالعزيز السائق', 'a3@example.com', '+966500000003'),
         ]
         cursor.executemany('''
             INSERT INTO users (username, password_hash, full_name, email, phone)

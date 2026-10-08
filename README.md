@@ -964,7 +964,7 @@ final response = await http.post(
   headers: {'Content-Type': 'application/json'},
   body: json.encode({
     'username': 'ahmed',
-    'password': '123456'
+    'password': ''
   }),
 );
 ```
