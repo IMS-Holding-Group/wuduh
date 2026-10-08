@@ -1,0 +1,13 @@
+{
+    "name": "وضوح",
+    "short_name": "وضوح",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#1a1a1a",
+    "theme_color": "#00d4d4",
+    "description": "تطبيق مساعدة السائقين في الضباب",
+    "orientation": "portrait-primary",
+    "prefer_related_applications": false,
+    "icons": []
+}
+
